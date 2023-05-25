@@ -1,15 +1,12 @@
 package toystore;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.List;
 import java.util.Map;
 
 
 public class Menu {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    private final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     Store store = new Store();
     boolean end = false;
     Map<String, String> mainMenu = Map.of(
@@ -40,7 +37,7 @@ public class Menu {
         return reader.readLine().equalsIgnoreCase("y");
     }
 
-    public void startRaffle() throws IOException {
+    public void startRaffle() {
         System.out.println("Let`s start the raffle. ");
         System.out.println("-------------------------------------------------------------------------");
     }
